@@ -1,0 +1,17 @@
+# The script below will convert a directory of spherical panorama images into circular hemispherical photos
+# Script was written by A.Z. Andis Arietta, 2021 for ImageMagick &.0.11-3 Q16 x64 on Windows 10
+# NOTE: This script converts and overwrites the images in the folder. I suggest that you keep a copy of your original images in a separate directory in case anything goes wrong.
+
+cd "YOUR_IMAGE_DIR"
+
+magick mogrify -level 2%,98% -crop 8704x2176-0-0 -resize "8704x8704!" -virtual-pixel horizontal-tile -background black +distort Polar 0 -flop -flip *jpg
+
+Explanations:
+-level 2%,98%  # This applies a 2% contrast stretch to the image to improve binarization
+-crop 8704x2176-0-0  # Crop the top half of the image (i.e. upper hemisphere). NOTE: Be sure to adjust this to 1.00x0.25 the dimmensions of your panorama dimmensions
+-resize "8704x8704!"  # Resize the image into a square in order to apply a polar transformation. NOTE: Be sure to adjust this to 1.00x1.00 the width of your panorama
+-virtual-pixel horizontal-tile  # Deines the background color lookup space
+-background black  # Specifies that we want the backgrounf to be black when the color lookup misses pixel during polar transformation
++distort Polar 0  # Apply polar distrotion to remap the image into a circular image
+-flop  # Horizontally flip the image
+-flip  # Vertically flip the image. NOTE: these transformations make the top of the image N if the sphere was created with the initial heading of North
