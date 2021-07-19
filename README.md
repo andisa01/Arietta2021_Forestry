@@ -4,7 +4,7 @@ Data archive and code for [Arietta, A.Z.A. (2021) Estimation of forest canopy st
  
 This repository contains scripts to convert spherical panoramas to hemispherical images either via command line with [ImageMagick](https://imagemagick.org/index.php) or via GUI in [GIMP](https://www.gimp.org/) with batch process in [BIMP](https://alessandrofrancesconi.it/projects/bimp/).
 
-Hemispherical images can then be used to estimate canopy structure and light metrics. I used [Gap Light Analyzer](https://www.caryinstitute.org/science/our-scientists/dr-charles-d-canham/gap-light-analyzer-gla) in the study and provide AutoHotKey scripts to automate the GLA GUI.
+Hemispherical images can then be used to estimate canopy structure and light metrics. I used [Gap Light Analyzer](https://www.caryinstitute.org/science/our-scientists/dr-charles-d-canham/gap-light-analyzer-gla) in the study and provide [AutoHotKey](https://www.autohotkey.com/) scripts to automate the GLA GUI.
 
 Finally, this repo included R scripts used in the analysis and figure creation for the manuscript.
 
