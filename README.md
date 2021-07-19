@@ -1,6 +1,8 @@
 Data archive and code for [Arietta, A.Z.A. (2021) Estimation of forest canopy structure and understory light using spherical panorama images from smartphone photography. _Forestry._ DOI: 10.1093/forestry/cpab034.](https://academic.oup.com/forestry/advance-article-abstract/doi/10.1093/forestry/cpab034/6320703?redirectedFrom=fulltext)
 
 ---
+
+![Figure 1](https://raw.githubusercontent.com/andisa01/Arietta2021_Forestry/main/Fig1small.PNG "Figure 1")
  
 This repository contains scripts to convert spherical panoramas to hemispherical images either via command line with [ImageMagick](https://imagemagick.org/index.php) or via GUI in [GIMP](https://www.gimp.org/) with batch process in [BIMP](https://alessandrofrancesconi.it/projects/bimp/).
 
